@@ -101,11 +101,12 @@ button{
 
 .weatherFocast::-webkit-scrollbar-thumb {
   background-color: #8a2387; /* Color of the scrollbar */
+
   border-radius: 10px; /* Round edges */
 }
 
 .weatherFocast::-webkit-scrollbar-track {
-  background-color: #ffffff; /* Background of the track */
+  background-color: #bb2929; /* Background of the track */
 }
 
 
@@ -118,16 +119,24 @@ button{
 }
 
 .forecastList {
-  display: flex;
-  gap: 50px;
-  justify-content: left;
+  display: flex; /* Use flex layout */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  gap: 10px; /* Adjust gap between items */
 }
-.forecastDetails{
+
+.forecastDetails {
   display: flex;
-   flex-direction: column;
-   gap: 20px;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center; /* Center align items */
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Light border */
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.2); /* Slightly transparent background */
+  min-width: 150px; /* Minimum width to ensure items are distinguishable */
+  flex: 0 0 auto; /* Prevent items from shrinking */
 }
+
+
 .suggestions-container div {
   width: 500px;
   color: white;
