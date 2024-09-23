@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <title>Weather App</title>
+</head>
+<body>
+  <div class="header">
+    <div class="left-side">
+      <i class="fa-solid fa-wind"></i>
+    </div>
+    <div class="right-side">
+      <a href="https://github.com/MISHOW2"><i class="fa-brands fa-github"></i></a>
+      <a href=""><i class="fa-solid fa-code"></i></a>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <div class="search-container">
+      <div class="search-btn-input">
+        <input type="text" class="search-box" placeholder="Search City">
+        <button class="btn-search">Search</button>
+      </div>
+      <div class="suggestions-container"></div> <!-- Suggestions will be displayed here -->
+    </div>
+
+    <div class="your-location">
+      <div class="displayName">
+        <h1 class="cityName"></h1>
+        <h1 class="currentTemp"></h1>
+       </div>
+      <div class="currentIcon">
+        <img src="" alt="currentIcon">
+      </div>
+    </div>
+
+    <div class="display-weather-content" style="display:none;">
+      <div class="weatherFocast">
+        <h1>Today's Forecast</h1>
+        <div class="forecastList">
+
+        </div>
+      </div>
+
+      <div class="addtionalData">
+        <h4>ADDITIONAL CONDITIONS</h4>
+        <div class="conditions-container">
+          <div class="flex-display">
+            <div class="conditions-details-container">
+              <i class="fa-solid fa-droplet"></i>
+              <div>
+                <p class="chances-rain">Chances of Rain</p>
+                <p class="rain">0 %</p>
+              </div>
+            </div>
+            <div  class="conditions-details-container">
+              <i class="fa-solid fa-wind"></i>
+              <p class="">Wind</p>
+              <div>
+                <p class="wind"></p>
+              </div>
+            </div>
+            <div  class="conditions-details-container">
+              <i class="fa-solid fa-sun"></i>
+              <p class="">REAL FEEL</p>
+              <div>
+                <p class="feel-like">33</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>Created by <a href="https://github.com/your-profile" target="_blank">Mixo Shibambo</a></p>
+      <p>&copy; 2024 Weather App</p>
+    </div>
+  </footer>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
