@@ -37,9 +37,6 @@ const fetchWeatherDATA = async (cityName) => {
             displayWeather.style.display = "block"; // Make sure the weather content is displayed when data is fetched
 
             // Get current weather
-            let weatherDescription = response.list[0].weather[0].description;
-            let weatherIcon = response.list[0].weather[0].icon;
-            let currentTemp = response.list[0].main.temp;
             let feelsLike = response.list[0].main.feels_like; // Real feel temperature
             let rainChance = response.list[0].pop * 100; // Probability of precipitation
             let windSpeed = response.list[0].wind.speed; // Wind speed
@@ -92,9 +89,14 @@ searchBtn.addEventListener("click", () => {
 
 // Check local storage for a saved city on page load
 window.onload = () => {
-    const savedCity = localStorage.getItem('selectedCity');
-    if (savedCity) {
-        inputElement.value = savedCity; // Show saved city in the input box
-        fetchWeatherDATA(savedCity); // Fetch weather for the saved city
+    let savedCity = localStorage.getItem('selectedCity');
+    const defaultCity = 'New York'; // Set your default city here
+
+    // If no city is saved, use the default city
+    if (!savedCity) {
+        savedCity = defaultCity;
     }
+
+    inputElement.value = savedCity; // Show saved or default city in the input box
+    fetchWeatherDATA(savedCity); // Fetch weather for the saved or default city
 };
