@@ -1,12 +1,16 @@
 * {
   font-family: "Inter", system-ui;
 }
-
-body {
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
   padding: 0; 
   background-color: hsla(336, 84%, 58%, 0.479);
   overflow-x: none;
 }
+
 a{
   color:black;
 }
